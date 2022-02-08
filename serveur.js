@@ -12,6 +12,15 @@ connectDB()
 //utilisation de json pour la visibilé des données
 serveur.use(express.json());
 
+
+//heroku
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/build'));
+    app.get('*', (req, res) => {
+      res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+    });
+  }
+
 //appel au fonctionnalité des produits
 serveur.use('/api/produit',produitRouter)
 
