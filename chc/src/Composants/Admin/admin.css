@@ -1,0 +1,7 @@
+.Admin{
+  display:flex;
+  /* flex-direction: row;
+  flex-wrap: nowrap;
+ align-content: space-between; */
+  margin-top: 45px;
+}
