@@ -14,10 +14,10 @@ serveur.use(express.json());
 
 
 //heroku
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static('client/build'));
+if (3000 === 'production') {
+    app.use(express.static('chc/build'));
     app.get('*', (req, res) => {
-      res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+      res.sendFile(path.join(__dirname, 'chc', 'build', 'index.html'));
     });
   }
 

@@ -34,12 +34,12 @@
     "redux-thunk": "^2.4.0",
     "tslib": "^2.3.1"
   },
-  "start": "node server.js",
-  "server": "nodemon server.js",
-  "client": "cd client && npm run start",
-  "server-install": "npm install",
-  "client-install": "cd client && npm install",
-  "install-all": "concurrently \"npm run server-install\" \"npm run client-install\"",
-  "dev": "concurrently \"npm run server\" \"npm run client\"",
-  "heroku-postbuild": "cd client && npm install && npm run build"
+  "start": "node serveur.js",
+  "serveur": "nodemon serveur.js",
+  "chc": "cd chc && npm run start",
+  "serveur-install": "npm install",
+  "chc-install": "cd chc && npm install",
+  "install-all": "concurrently \"npm run serveur-install\" \"npm run chc-install\"",
+  "dev": "concurrently \"npm run serveur\" \"npm run chc\"",
+  "heroku-postbuild": "cd chc && npm install && npm run build"
 }
